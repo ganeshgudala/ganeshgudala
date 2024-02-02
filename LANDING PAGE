@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Landing Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    section {
+      margin: 20px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      color: #3498db;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .feature {
+      width: 30%;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Landing Page</h1>
+    <p>A brief and catchy tagline goes here.</p>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Welcome to Our Website</h2>
+      <p>This is a simple and clean landing page template. Feel free to customize it to suit your needs.</p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Feature 1</h3>
+          <p>Description of feature 1.</p>
+        </div>
+        <div class="feature">
+          <h3>Feature 2</h3>
+          <p>Description of feature 2.</p>
+        </div>
+        <div class="feature">
+          <h3>Feature 3</h3>
+          <p>Description of feature 3.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Landing Page. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
