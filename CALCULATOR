@@ -11,6 +11,8 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
     }
 
     #calculator {
@@ -18,20 +20,46 @@
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 8px;
       max-width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 
     #display {
       grid-column: span 4;
-      height: 40px;
-      font-size: 1.5rem;
+      height: 60px;
+      font-size: 1.8rem;
       text-align: right;
       padding: 0 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
 
     button {
-      padding: 10px;
-      font-size: 1rem;
+      padding: 15px;
+      font-size: 1.2rem;
       cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: #e0e0e0;
+      color: #333;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d1d1d1;
+    }
+
+    button.operator {
+      background-color: #fbc02d;
+      color: #fff;
+    }
+
+    button.operator:hover {
+      background-color: #f9a825;
     }
   </style>
 </head>
@@ -39,22 +67,23 @@
   <div id="calculator">
     <div id="display"></div>
     <button onclick="clearDisplay()">C</button>
-    <button onclick="appendCharacter('/')">/</button>
-    <button onclick="appendCharacter('*')">*</button>
     <button onclick="appendCharacter('7')">7</button>
     <button onclick="appendCharacter('8')">8</button>
     <button onclick="appendCharacter('9')">9</button>
-    <button onclick="appendCharacter('-')">-</button>
+    <button class="operator" onclick="appendCharacter('/')">/</button>
     <button onclick="appendCharacter('4')">4</button>
     <button onclick="appendCharacter('5')">5</button>
     <button onclick="appendCharacter('6')">6</button>
-    <button onclick="appendCharacter('+')">+</button>
+    <button class="operator" onclick="appendCharacter('*')">*</button>
     <button onclick="appendCharacter('1')">1</button>
     <button onclick="appendCharacter('2')">2</button>
     <button onclick="appendCharacter('3')">3</button>
-    <button onclick="calculateResult()">=</button>
+    <button class="operator" onclick="appendCharacter('-')">-</button>
     <button onclick="appendCharacter('0')">0</button>
     <button onclick="appendCharacter('.')">.</button>
+    <button onclick="deleteCharacter()">DEL</button>
+    <button class="operator" onclick="appendCharacter('+')">+</button>
+    <button class="operator" onclick="calculateResult()">=</button>
   </div>
 
   <script>
@@ -69,6 +98,11 @@
     function clearDisplay() {
       expression = '';
       display.innerText = '';
+    }
+
+    function deleteCharacter() {
+      expression = expression.slice(0, -1);
+      display.innerText = expression;
     }
 
     function calculateResult() {
