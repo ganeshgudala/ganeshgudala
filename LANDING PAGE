@@ -18,6 +18,14 @@
       background-color: #f8f9fa;
       color: #333;
       line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_640.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
     }
 
     .container {
@@ -34,12 +42,12 @@
     header h1 {
       font-size: 3em;
       margin-bottom: 20px;
-      color: #333;
+      color: skyblue;
     }
 
     header p {
       font-size: 1.2em;
-      color: #666;
+      color: white;
     }
 
     .cta {
